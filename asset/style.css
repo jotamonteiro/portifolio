@@ -1,0 +1,217 @@
+:root {
+    --primaria: #4f46e5;
+    --claro: #e2e8f0;
+    --escuro: #151d2bfc;
+    --secundaria: #7c3aed;
+    --maisescuro: #0a0d1c;
+    --vidro: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:var(--escuro);
+    color: var(--claro);
+}
+
+.menu {
+    background-color: rgb(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    padding: 1.5rem;
+}
+
+.menu ul {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.menu-links {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--claro);
+    position: relative;
+    padding: 0.3rem 0;
+}
+
+.menu-links:hover {
+    color: var(--primaria);
+    transition: color 0.3s ease;
+}
+
+.menu-links::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to right, var(--primaria), var(--secundaria));
+    transition: width 0.5s ease;
+}
+
+.menu-links:hover::before { 
+    width: 100%;
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+    border-radius: 50%;
+    border: 4px solid var(--vidro);
+}
+
+.inicio {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+}
+
+.inicio h1{
+    font-size: 3rem;
+    color: var(--primaria);
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.inicio h2 {
+    font-size: 1.3rem;
+    color: var(--claro);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sobre {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    align-content: center;
+}
+
+.sobre h2 {
+    font-size: 3rem;
+    color: var(--claro);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.sobre-texto {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: var(--vidro);
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.sobre p {
+    text-align: center;
+    font-size: 1.2rem;
+    
+}
+
+.projetos {
+    padding: 6rem 2rem;
+}
+
+.projetos h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.projeto-1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.projetos-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: solid 1px var(--vidro);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.projetos-card img {
+    height: 200px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.projetos-card h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.projetos-card:hover {
+    box-shadow: 0 0 20px rgba(79, 70, 229, 0.2);
+    transform: translateY(-10px) scale(1.05);
+}
+
+.projetos-card p {
+    color: rgba(226, 232, 244, 0.8);
+    line-height: 1.25rem;
+}
+
+.caixa-texto {
+    padding: 1rem;
+}
+
+.particula {
+    position: fixed;
+    z-index: -100;
+    pointer-events: none;
+}
+
+.particula::before {
+    content: '';
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, var(--primaria) 0%, rgba(79, 70, 229, 0.3) 30%, rgba(79, 70, 229, 0.1) 60%, transparent 100%);
+    filter: blur(20px);
+    border-radius: 50%;
+    animation: brilho1 4s ease-in-out infinite alternate;
+}
+
+.particula::after {
+    content: '';
+    position: fixed;
+    bottom: -100px;
+    right: -100px;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, var(--secundaria) 0%, rgba(124, 58, 237, 0.3) 30%, rgba(124, 58, 237, 0.1) 60%, transparent 10%);
+    filter: blur(20px);
+    border-radius: 50%;
+    animation: brilho2 5s ease-in-out infinite alternate;
+}
+

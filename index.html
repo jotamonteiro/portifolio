@@ -2,61 +2,88 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curriculo João Monteiro</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portifólio | João Monteiro</title>
+  <link rel="stylesheet" href="/asset/style.css" />
 </head>
 
 <body>
-    <div class="info">
-        <div class="imag">
-            <img src="joao_foto.jpg" alt="Foto de joão">
-        </div>
-        <div>
-            <h1 class="maint">Curriculo</h1>
-            <div class="dados">
-                <h2>Dados Pessoais</h2>
-                <ul>
-                    <li>Idade: 18 anos</li>
-                    <li>Endereço: Centro, Cabedelo-PB</li>
-                    <li>Telefone: (83) 998880385</li>
 
-                </ul>
-            </div>
+  <div class="particula">
 
-            <div class="formacao">
-                <h2><strong>Formações</strong></h2>
-                <ul>
-                    <li>Tec. em Recursos Pesqueiros - IFPB Campus Cabedelo</li>
-                    <li>Sistemas Para Internet - UNIESP (Prev. de conclusão/2027.2)</li>
-                </ul>
-            </div>
+  </div>
 
-            <div class="profi">
-                <h2>Experiencia Profissional</h2>
-                <p><strong>Sem Experiencia Profissional</strong></p>
-            </div>
-
-            <div class="cursos">
-                <h2>Cursos e Aprimoramentos</h2>
-                <ul>
-                    <li>Programação em Python - Curso em Vídeo</li>
-                    <li>HTML 5 e CSS - Curso em Vídeo</li>
-                    <li>JavaScript - Curso em Vídeo</li>
-                </ul>
-            </div>
-            <div class="contato">
-                <h2>Contato</h2>
-                <ul>
-                    <li>Email: joaopb187@hotmail.com</li>
-                    <li>LinkedIn:<a href="https://www.linkedin.com/in/joão-monteiro-aa2b5a342/" target="_blank"> João Monteiro</a></li>
-                    <li>GitHub:<a href="https://github.com/jotamonteiro" target="_blank"> jotamonteiro</a></li>
-                    <li>WhatsApp: (83) 998880385</li>
-                </ul>
-            </div>
-        </div>
+  <nav>
+    <div class="menu">
+      <ul>
+        <li><a href="#inicio" class="menu-links">Início</a></li>
+        <li><a href="#sobre" class="menu-links">Sobre</a></li>
+        <li><a href="#projetos" class="menu-links">Projetos</a></li>
+        <li><a href="#contato" class="menu-links">Contato</a></li>
+      </ul>
     </div>
+  </nav>
+
+  <main id="inicio" class="inicio">
+    <img src="/img/foto1.jpg" alt="Foto de João Monteiro" class="logo" />
+    <h1>João Monteiro</h1>
+    <h2>Programador BACK-END e Pentester</h2>
+  </main>
+  <section id="sobre" class="sobre">
+    <h2>Sobre Mim</h2>
+    <div class="sobre-texto">
+      <p>
+        Olá, eu sou João Lucas Monteiro, estudante de Sistemas para Internet e
+        apaixonado por tecnologia. Sou um estudante dedicado, sempre buscando
+        aprender mais sobre a aréa, principalmente Cyber Security e
+        Programação.
+      </p>
+    </div>
+  </section>
+
+  <section id="projetos" class="projetos">
+    <h2>Meus Projetos</h2>
+    <!-- <p>Aqui estão alguns dos meus projetos:</p> -->
+    <div class="projeto-1">
+      <div class="projetos-card">
+        <img src="/img/pythonsos.png" alt="foto do PythonSOS" />
+        <div class="caixa-texto">
+          <h3>PythonSOS</h3>
+          <p>
+            Site para ensinar programação em Python com uma IA para tirar
+            duvidas. Desenvolvido em colaboração com colegas, usando Flask e
+            Javascript
+          </p>
+        </div>
+      </div>
+      <div class="projetos-card">
+        <img src="/img/luxoiate.png" alt="foto do luxo iate" />
+        <div class="caixa-texto">
+          <h3>Site de Iates</h3>
+          <p>
+            Luxo Aluguel de Iates, foi um site desenvolvido para um projeto na
+            universidade. Usando apenas o HTML e o CSS
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Você pode me encontrar nas redes sociais:</p>
+    <ul>
+      <li>
+        <a href="https://www.linkedin.com/in/joaomonteirodev/" target="_blank">LinkedIn</a>
+      </li>
+      <li><a href="github.com/jotamonteiro" target="_blank">GitHub</a></li>
+      <li>Email: <a href="mailto:joaomonteiro@gmail.com">Email</a></li>
+    </ul>
+  </section>
+  <section id="footer">
+    <p>&copy; 2023 João Monteiro. Todos os direitos reservados.</p>
+  </section>
 </body>
 
 </html>
